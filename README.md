@@ -4,15 +4,16 @@ Bienvenido a este repositorio que presenta la solucion del Taller 2 Progrmacion 
 
 ## Contenido del Repositorio
 
-- **`ManipulacionListas/`**: [Procesamiento de Edad](ManipulaiconListas/README.md)
-- **`AgendaContactos/`**: [Agenda de Contactos](AgendaContactos/README.md)
-- **`ListaInvitados/`**: [Gestión de Invitados](ListaInvitados/README.md)
+- **`ManipulacionListas/`**: [Procesamiento de Edad](ManipulacionnListas)
+- **`AgendaContactos/`**: [Agenda de Contactos](AgendaContactos)
+- **`ListaInvitados/`**: [Gestión de Invitados](ListaInvitados)
 
 ## Ejercicio 1: Procesamiento de Edad
 
 **Descripción**: Este ejercicio realiza varias operaciones basadas en la edad ingresada por el usuario. Incluye validación de edad, generación de mensajes de bienvenida, determinación de generación y evaluación de edades redondas.
 
 **Funcionalidades Principales**:
+
 - Generar un mensaje de bienvenida basado en la edad.
 - Determinar la generación a la que pertenece el usuario.
 - Evaluar si la edad es un número redondo.
@@ -24,6 +25,7 @@ Para más detalles, consulta el archivo `README.md` en la carpeta `ManipulacionL
 **Descripción**: Este ejercicio permite gestionar una agenda de contactos mediante una aplicación de consola. Los usuarios pueden agregar, mostrar, modificar, eliminar y buscar contactos, así como ver la agenda completa.
 
 **Funcionalidades Principales**:
+
 - Agregar nuevos contactos.
 - Mostrar un contacto específico.
 - Modificar detalles de un contacto.
@@ -38,6 +40,7 @@ Para más detalles, consulta el archivo `README.md` en la carpeta `AgendaContact
 **Descripción**: Esta aplicación gestiona una lista de invitados para una fiesta. Permite agregar, mostrar, eliminar, buscar y modificar la lista de invitados.
 
 **Funcionalidades Principales**:
+
 - Agregar invitados a la lista.
 - Mostrar la lista completa de invitados.
 - Mostrar un invitado específico.
@@ -45,9 +48,12 @@ Para más detalles, consulta el archivo `README.md` en la carpeta `AgendaContact
 - Buscar un invitado por nombre.
 - Modificar el nombre de un invitado existente.
 
-Para más detalles, consulta el archivo `README.md` en la carpeta `ejercicio2`.
-
+Para más detalles, consulta el archivo `README.md` en la carpeta `ListaInvitados`.
 
 ---
 
-**¡Gracias por visitar este repositorio! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto.**
+### **Nota**: Aun no se agregan los README.md de cada archivo por falta de tiempo 😋, otra nota esta más dificil hacer READMEs que codigo 😔
+
+---
+
+**¡Gracias por visitar este repositorio!**
