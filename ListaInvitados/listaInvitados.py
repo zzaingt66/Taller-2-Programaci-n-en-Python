@@ -6,50 +6,44 @@ def invitadosApp():
         # Función para agregar invitados a la lista.
         while True:
             nombre = input("Ingrese el nombre del invitado (o presione Enter para terminar): ")
-            if nombre == "":
-                break  # Termina el bucle si el usuario presiona Enter sin ingresar un nombre.
             listaInvitados.append(nombre.capitalize())
             # Agrega el nombre con la primer letra en MAYUS a la lista y muestra un mensaje de confirmación.
+            if nombre == "":
+                break  # Termina el bucle si el usuario presiona Enter sin ingresar un nombre.
+            
 
     def mostrarInvitados():
         # Función para mostrar todos los invitados en la lista.
-        if not listaInvitados:
+        if not listaInvitados:  #Evalúa la lista si la lista esta vacia retorna False y el operador Not
+            # revierte el False a True para que el if se ejecute, solamente estaba probrando 
             print("La lista de invitados está vacía.")
         else:
-            print("\n📋 Lista de invitados:")
+            print("\n📋--> Lista de invitados:")
             for i, invitado in enumerate(listaInvitados):
-                print(f"{i}: {invitado}")  # Muestra el índice y el nombre de cada invitado.
+                print(f"{i + 1} --> {invitado}")  # Muestra el índice y el nombre de cada invitado.
 
     def mostrarUnInvitado():
         # Función para mostrar un invitado específico basado en el índice.
         mostrarInvitados()
         if listaInvitados:
-            try:
-                indice = int(input("Ingrese el índice del invitado que desea mostrar: "))
-                if 0 <= indice < len(listaInvitados):
-                    print(f"👤 Invitado: {listaInvitados[indice]}")
-                    # Muestra el nombre del invitado seleccionado si el índice es válido.
-                else:
-                    print("❌ Índice inválido.")
-            except ValueError:
-                print("❌ Por favor, ingrese un número válido.")
-                # Maneja el caso donde la entrada no es un número.
+            indice = int(input("Ingrese el índice del invitado que desea ver: "))
+            if 0 <= indice < len(listaInvitados):# Un operacion compuesta(creo), que evalua dos veces una misma variable
+                print(f"👤 Invitado: {listaInvitados[indice]}")
+                # Muestra el nombre del invitado seleccionado si el índice es válido.
+            else:
+                print("❌ Índice inválido.")
 
     def eliminarInvitado():
         # Función para eliminar un invitado de la lista basado en el índice.
         mostrarInvitados()
         if listaInvitados:
-            try:
-                indice = int(input("Ingrese el índice del invitado que desea eliminar: "))
-                if 0 <= indice < len(listaInvitados):
-                    eliminado = listaInvitados.pop(indice)
-                    print(f"🗑️ {eliminado} ha sido eliminado de la lista.")
-                    # Elimina el invitado de la lista y muestra un mensaje de confirmación.
-                else:
-                    print("❌ Índice inválido.")
-            except ValueError:
-                print("❌ Por favor, ingrese un número válido.")
-                # Maneja el caso donde la entrada no es un número.
+            indice = int(input("Ingrese el índice del invitado que desea eliminar: "))
+            if 0 <= indice < len(listaInvitados):
+                eliminado = listaInvitados.pop(indice)
+                print(f"🗑️ {eliminado} ha sido eliminado de la lista.")
+                # Elimina el invitado de la lista y muestra un mensaje de confirmación.
+            else:
+                print("❌ Índice inválido.")
 
     def buscarInvitado():
         # Función para buscar invitados en la lista por nombre.
@@ -68,7 +62,6 @@ def invitadosApp():
         # Función para modificar el nombre de un invitado en la lista.
         mostrarInvitados()
         if listaInvitados:
-            try:
                 indice = int(input("Ingrese el índice del invitado que desea modificar: "))
                 if 0 <= indice < len(listaInvitados):
                     nuevoNombre = input("Ingrese el nuevo nombre del invitado: ").capitalize()
@@ -77,9 +70,7 @@ def invitadosApp():
                     # Actualiza el nombre del invitado en la lista y muestra un mensaje de confirmación.
                 else:
                     print("❌ Índice inválido.")
-            except ValueError:
-                print("❌ Por favor, ingrese un número válido.")
-                # Maneja el caso donde la entrada no es un número.
+
 
     def mostrarMenu():
         # Función para mostrar el menú de opciones.

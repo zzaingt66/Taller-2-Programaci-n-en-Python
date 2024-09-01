@@ -2,6 +2,7 @@ def Agenda():
     # Inicializa un diccionario vacío para almacenar los contactos.
     agenda = {}
 
+
     def addContact():
         # Esta función agrega nuevos contactos a la agenda.
         while True:
@@ -30,6 +31,7 @@ def Agenda():
             indice = int(input("\nSeleccione el índice del contacto que desea ver: ")) - 1
             # Convierte la entrada del usuario en un índice válido (0 basado).
             if 0 <= indice < len(agenda):
+
                 # Verifica si el índice está dentro del rango válido.
                 nombre = list(agenda.keys())[indice]
                 # Obtiene el nombre del contacto basado en el índice.
@@ -71,7 +73,7 @@ def Agenda():
                 print("\n❌ Índice no válido.\n")
                 # Mensaje de error si el índice no es válido.
         else:
-            print("\n⚠️ La agenda está vacía.\n")
+            print("\n ⚠️ La agenda está vacía.\n")
             # Mensaje si la agenda está vacía.
 
     def deleteContact():
@@ -93,16 +95,16 @@ def Agenda():
                 print("\n❌ Índice no válido.\n")
                 # Mensaje de error si el índice no es válido.
         else:
-            print("\n⚠️ La agenda está vacía.\n")
+            print("\n ⚠️ La agenda está vacía.\n")
             # Mensaje si la agenda está vacía.
 
     def showAgenda():
         # Esta función muestra todos los contactos en la agenda.
-        for i, (nombre, datos) in enumerate(agenda.items(), start=1):
-            # Recorre los contactos en la agenda y muestra el índice, nombre y teléfono.
-            print(f"{i}. {nombre} - Teléfono: {datos['telefono']}")
-        print("-" * 30)
-        # Imprime una línea separadora para mejorar la legibilidad.
+            for i, (nombre, datos) in enumerate(agenda.items(), start=1):
+                # Recorre los contactos en la agenda y muestra el índice, nombre y teléfono.
+                print(f"{i}. {nombre} - Teléfono: {datos['telefono']}")
+            print("-" * 30)
+            # Imprime una línea separadora para mejorar la legibilidad.
 
     def searchContact():
         # Esta función busca un contacto específico por nombre.
